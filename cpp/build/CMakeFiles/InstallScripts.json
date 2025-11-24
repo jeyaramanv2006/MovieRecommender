@@ -1,0 +1,8 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/jeyaraman/minipro_testing_2/jakube/cpp/build/cmake_install.cmake",
+		"/home/jeyaraman/minipro_testing_2/jakube/cpp/build/nanobind/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

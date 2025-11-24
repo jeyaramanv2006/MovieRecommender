@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -Wl,--dependency-file=CMakeFiles/jakube_ext.dir/link.d -shared  -o jakube.cpython-312-x86_64-linux-gnu.so CMakeFiles/jakube_ext.dir/bindings.cpp.o  libnanobind-static.a
