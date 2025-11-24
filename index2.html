@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommendation System | Jakube Algorithm</title>
+
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="title">
+                <span class="icon">🎬</span>
+                Movie Recommender
+            </h1>
+            <p class="subtitle">Using Jakube Algorithm</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            
+            <!-- Search Section -->
+            <section class="search-section" id="searchSection">
+                <h2 class="section-title">Recommend Movies For</h2>
+                <div class="search-box">
+                    <input 
+                        type="text" 
+                        id="searchInput" 
+                        class="search-input" 
+                        placeholder="Search for a movie... (e.g., Inception, The Matrix)"
+                        autocomplete="off"
+                    >
+                    <button id="searchBtn" class="search-btn">
+                        🔍 Search
+                    </button>
+                </div>
+                
+                <!-- Search Results -->
+                <div id="searchResults" class="search-results hidden"></div>
+            </section>
+
+            <!-- Selected Movie Section -->
+            <section class="movie-section hidden" id="movieSection">
+                <h2 class="section-title">Selected Movie</h2>
+                <div id="selectedMovie" class="selected-movie"></div>
+                <button id="getRecommendationsBtn" class="recommend-btn hidden">
+                    ✨ Get Recommendations
+                </button>
+            </section>
+
+            <!-- Recommendations Section -->
+            <section class="recommendations-section hidden" id="recommendationsSection">
+                <div class="rec-header">
+                    <h2 class="section-title">Recommended Movies</h2>
+                    <div class="algorithm-badge">
+                        <span class="badge-icon">🎯</span>
+                        <span id="algorithmUsed">Jakube Algorithm</span>
+                    </div>
+                </div>
+                <p class="rec-description">
+                    Based on similarity analysis using Approximate Nearest Neighbor search
+                </p>
+                <div id="recommendations" class="recommendations-grid"></div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>DSA Mini Project</p>
+            <p class="footer-desc">
+                Using Random Projection Trees & Binary Space Partitioning for efficient similarity search
+            </p>
+        </div>
+    </footer>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay hidden">
+        <div class="loader"></div>
+        <p>Loading...</p>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

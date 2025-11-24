@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommender | Powered with Jakube Algorithm</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-background">
+        <div class="bg-layer bg-gradient"></div>
+        <div class="bg-layer bg-network-1"></div>
+        <div class="bg-layer bg-network-2"></div>
+        <div class="bg-overlay bg-overlay-top"></div>
+        <div class="bg-overlay bg-overlay-bottom"></div>
+        <div class="glow-orb glow-orb-1"></div>
+        <div class="glow-orb glow-orb-2"></div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        <!-- Search Section -->
+        <section id="searchSection" class="search-section">
+            <div class="hero-header">
+                <h1 class="hero-title gradient-text">Movie Recommender</h1>
+                <p class="hero-subtitle">
+                    Powered by <span class="highlight-text">Jakube Algorithm</span>
+                </p>
+            </div>
+
+            <div class="glass-card search-card">
+                <h2 class="section-title">Find Movies Similar To</h2>
+                <div class="search-box">
+                    <div class="search-input-wrapper">
+                        <span class="search-icon">🔍</span>
+                        <input 
+                            type="text" 
+                            id="searchInput" 
+                            class="search-input" 
+                            placeholder="Search for a movie... (e.g., Inception, The Matrix)"
+                            autocomplete="off"
+                        >
+                    </div>
+                    <button id="searchBtn" class="btn btn-primary">
+                        <span>Search</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Search Results -->
+            <div id="searchResults" class="search-results hidden"></div>
+        </section>
+
+        <!-- Selected Movie Section -->
+        <section id="movieSection" class="movie-section hidden">
+            <h2 class="page-title">Selected Movie</h2>
+            <div class="glass-card movie-card">
+                <div id="selectedMovie" class="selected-movie"></div>
+            </div>
+            <button id="getRecommendationsBtn" class="btn btn-secondary btn-large hidden">
+                <span class="btn-icon">✨</span>
+                <span>Get Recommendations</span>
+            </button>
+        </section>
+
+        <!-- Recommendations Section -->
+        <section id="recommendationsSection" class="recommendations-section hidden">
+            <div class="rec-header">
+                <h2 class="page-title">Recommended Movies</h2>
+                <div class="algorithm-badge glass-card">
+                    <span class="badge-icon">🎯</span>
+                    <span id="algorithmUsed">Jakube Algorithm</span>
+                </div>
+            </div>
+            <p class="rec-description">
+                Based on similarity analysis using Approximate Nearest Neighbor search
+            </p>
+            <div id="recommendations" class="recommendations-grid"></div>
+            <div class="new-search-wrapper">
+                <button id="newSearchBtn" class="btn btn-outline">
+                    <span>🔍</span>
+                    <span>Search Another Movie</span>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay hidden">
+        <div class="loader-wrapper">
+            <div class="loader"></div>
+            <p class="loading-text">Analyzing...</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
